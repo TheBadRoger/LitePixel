@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Core/">
+    <Project Path="Core/LPDraw/LPDraw.vcxproj" Id="7eeb83a1-5dcf-48a8-adca-4c16f4f26c8e" />
+    <Project Path="Core/LPShader/LPShader.vcxproj" Id="4897e4b5-57de-4c07-b742-798abd4cb6b4" />
+  </Folder>
+</Solution>
