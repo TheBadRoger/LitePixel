@@ -10,6 +10,7 @@ Pixel LPS_API BrightenColor(const Pixel& c, float r);
 Pixel LPS_API DarkenColor(const Pixel& c, float r);
 Pixel LPS_API MixColors(const Pixel& c1, const Pixel& c2, float r);
 Pixel LPS_API GreyScale(const Pixel& c);
+Pixel LPS_API GreyScalePixel(UINT g);
 Pixel LPS_API BlackWhite(const Pixel& c, USINT threshold);
 Pixel LPS_API InvertGreyScale(const Pixel& c);
 Pixel LPS_API RedChannel(const Pixel& c);

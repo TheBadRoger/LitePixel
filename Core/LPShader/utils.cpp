@@ -59,6 +59,10 @@ Pixel GreyScale(const Pixel& c) {
 	);
 }
 
+Pixel LPS_API GreyScalePixel(UINT g) {
+	return Pixel(g, g, g);
+}
+
 Pixel BlackWhite(const Pixel& c, USINT threshold) {
 	USINT gray = USINT(0.299f * c.r + 0.587f * c.g + 0.114f * c.b);
 	if (gray >= threshold)

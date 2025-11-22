@@ -152,9 +152,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="DrawingUtilities.cpp" />
     <ClCompile Include="LPDraw.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DrawingUtilities.h" />
     <ClInclude Include="LPDraw.h" />
   </ItemGroup>
   <ItemGroup>

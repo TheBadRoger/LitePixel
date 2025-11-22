@@ -1,34 +1,12 @@
-﻿#include <iostream>
-#include <map>
-#include <utility>
-#include <vector>
-#include <algorithm>
-#include "LPDraw.h"
-using namespace std;
+﻿#include "LPDraw.h"
+#include "DrawingUtilities.h"
 
-struct exampleIter {
-	int x, y;
-	exampleIter(int _x, int _y) :x(_x), y(_y) {}
-	exampleIter& operator++() {
-		x++;
-		if (x >= 960)y++, x = 0;
-		return *this;
-	}
-	bool operator<(const exampleIter& b)const {
-		return x + y < b.x + b.y;
-	}
-};
-
-struct exampleDraw {
-	Pixel operator()(exampleIter p)const {
-		if ((p.x / 60 + p.y / 60) & 1)
-			return Pixel(White);
-		else
-			return Pixel(Black);
-	}
-};
+const int w = 16 * 60;
+const int h = 9 * 60;
 
 int main()
 {
-	ApplyDrawer("test.ppm", "P6", 16 * 60, 9 * 60, exampleDraw(), exampleIter(0, 0), exampleIter(960, 540));
+	SetDrawUtilBoard(w, h);
+	ApplyDrawer("test1.ppm", "P6", w, h,
+		dGradientColor(Red, Yellow, 0, w, 0, h), Position2DIter(0, 0), Position2DIter(w, h));
 }
